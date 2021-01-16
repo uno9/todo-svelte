@@ -14,7 +14,6 @@
     flex-direction: column;
     height: 100%;
   }
-
   .title {
     display: block;
     background-color: transparent;
@@ -25,7 +24,6 @@
     margin-bottom: 0.3em;
     width: 100%;
   }
-
   .content {
     flex: 1;
     display: block;

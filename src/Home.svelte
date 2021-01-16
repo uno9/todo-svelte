@@ -2,22 +2,19 @@
   import { push } from 'svelte-spa-router';
   import NoteList from './components/NoteList.svelte';
   import { loadNotes } from './lib/storage';
-
   const userNotes = loadNotes();
-
 </script>
 
 <div class="home">
   <h1 class="app-title">Svelte Note</h1>
   <NoteList notes={userNotes}></NoteList>
-  <button class="add" on:click={() => push('/add')}>+新しいノート</button>
+	<button class="add" on:click={() => push('/add')}>+新しいノート</button>
 </div>
 
 <style>
 	.app-title {
 		margin-bottom: 1em;
 	}
-
 	.add {
 		display: block;
 		background-color: rgb(75, 168, 51);

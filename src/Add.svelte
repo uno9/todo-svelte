@@ -2,10 +2,8 @@
   import { push } from 'svelte-spa-router';
   import NoteEditor from './components/NoteEditor.svelte';
   import { addNote } from './lib/storage';
-
   let title = '新しいノート';
   let content = '';
-
   const onSave = () =>  {
     addNote({title, content});
     push('/');
@@ -25,12 +23,10 @@
     flex-direction: column;
     height: 100%;
   }
-
   .button-container {
     padding: 1em 0;
     text-align: right;
   }
-
   .save {
     background-color: rgb(62, 68, 163);
     border: none;
@@ -40,7 +36,6 @@
     padding: 0.5em 1em;
     cursor: pointer;
   }
-
   .save:disabled {
     opacity: 0.3;
     cursor: auto;
