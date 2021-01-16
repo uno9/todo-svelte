@@ -1,11 +1,10 @@
 <script>
   import { push } from 'svelte-spa-router';
   import NoteList from './components/NoteList.svelte';
+  import { loadNotes } from './lib/storage';
 
-  const userNotes = [
-    { title: 'テストノート', content: 'これはテストです！' },
-    { title: 'やることリスト', content: '・Svleteの勉強\n・アプリ作成\n・公開' }
-  ];
+  const userNotes = loadNotes();
+
 </script>
 
 <div class="home">

@@ -6,5 +6,4 @@ const app = new App({
 	}
 });
 
-export const firebaseApp = firebase.initializeApp(firebaseConfig);
 export default app;

@@ -1,12 +1,12 @@
 const storageKey = 'sveltenote/notes';
 
 export const loadNotes = () => {
-  const rawNotes = sessionStorage.getItem(storageKey);
+  const rawNotes = localStorage.getItem(storageKey);
   return rawNotes ? JSON.parse(rawNotes) : [];
 };
 
 export const saveNotes = (notes) => {
-  sessionStorage.setItem(storageKey, JSON.stringify(notes));
+  localStorage.setItem(storageKey, JSON.stringify(notes));
 };
 
 export const addNote = (note) => {
